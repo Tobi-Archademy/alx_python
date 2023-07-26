@@ -10,7 +10,7 @@ def print_args():
     else:
         print('s:')
     for i in range(1, len(argv)):
-        print("{}: {}".format(i, argv[1]))
+        print("{}: {}".format(i, argv[i]))
 
 if __name__ == "__main__":
     print_args()
