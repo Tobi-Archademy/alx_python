@@ -5,3 +5,4 @@ This file is the root directory for the python modules project folder. It contai
 * Squared simple
 * 1-common_elements.py
 * Update dictionary
+* Best score
