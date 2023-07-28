@@ -6,3 +6,4 @@ This file is the root directory for the python modules project folder. It contai
 * 1-common_elements.py
 * Update dictionary
 * Best score
+* Multiply by using map
