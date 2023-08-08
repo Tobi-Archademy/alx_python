@@ -5,3 +5,4 @@ This file is the root directory for the python modules project folder. It contai
 * Square with size
 * Size validation
 * Area of a square
+* Access and update private attribute
