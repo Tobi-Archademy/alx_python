@@ -4,3 +4,4 @@ This file is the root directory for the python modules project folder. It contai
 
 * Exact same object
 * Same class or inherit from
+* Only sub class of
