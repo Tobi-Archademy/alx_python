@@ -9,3 +9,4 @@ This file is the root directory for the python modules project folder. It contai
 * Improve Geometry
 * Integer validator
 * Rectangle
+* Full rectangle
