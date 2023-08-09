@@ -6,3 +6,4 @@ This file is the root directory for the python modules project folder. It contai
 * Same class or inherit from
 * Only sub class of
 * Geometry module
+* Improve Geometry
