@@ -2,10 +2,29 @@
 """
 Contains the class BaseGeometry
 """
+class BaseMetaClass(type):
+    """
+    overrides.
+    """
 
+    def __dir__(cls):
+        return [
+            attribute
+            for attribute in super().__dir__()
+            if attribute != "__init_subclass__"
+        ]
 
 class BaseGeometry:
     """A class with public instance methods area and integer_validator"""
+    
+    def __dir__(cls):
+        return [
+            attribute
+            for attribute in super().__dir__()
+            if attribute != "__init_subclass__"
+        ]
+        
+        
     def area(self):
         """raises an exception when called"""
         raise Exception("area() is not implemented")
