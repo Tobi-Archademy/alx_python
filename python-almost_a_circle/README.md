@@ -11,3 +11,5 @@ This file is the root directory for the python modules project folder. It contai
 * Display #1
 * Update #0
 * Update #1
+* And now, the Square!
+* Square size
