@@ -7,3 +7,4 @@ This file is the root directory for the python modules project folder. It contai
 * Validate attributes
 * Area first
 * Display #0
+* __str__
