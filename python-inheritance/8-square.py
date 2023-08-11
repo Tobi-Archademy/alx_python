@@ -74,6 +74,7 @@ class Rectangle(BaseGeometry):
 
 """Square class"""
 
+
 class Square(Rectangle):
     """Initializing size"""
 
