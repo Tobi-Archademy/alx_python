@@ -4,50 +4,81 @@ Contains the class BaseGeometry and subclass Rectangle
 """
 
 
-class BaseGeometry:
-    """A class with public instance methods area and integer_validator"""
+class BaseMetaClass(type):
+    """
+    overrides.
+    """
+
+    def __dir__(cls):
+        return [
+            attribute
+            for attribute in super().__dir__()
+            if attribute != "__init_subclass__"
+        ]
+
+
+class BaseGeometry(metaclass=BaseMetaClass):
+    """
+    Do nothing: By passing pass.
+    """
+
+    def __dir__(cls):
+        return [
+            attribute
+            for attribute in super().__dir__()
+            if attribute != "__init_subclass__"
+        ]
+
     def area(self):
-        """raises an exception when called"""
+        """
+        Public instance method that raises an Exception
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """validates that value is an integer greater than 0"""
+        """
+        Public instance method that validate a value
+        Attr:
+            name(string): the name string.
+            value(int): must be an integer greater than 0.
+        """
+        self.name = name
+        self.value = value
+
         if type(value) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
+            raise TypeError("{} must be an integer".format(name))
+
         if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(name))
+
+
+"""Rectangle class that inherit from BaseGeometry"""
 
 
 class Rectangle(BaseGeometry):
-    """A representation of a rectangle"""
+
+    """Initializing with and height"""
+
     def __init__(self, width, height):
-        """instantiation of the rectangle"""
-        self.integer_validator("width", width)
         self.__width = width
-        self.integer_validator("height", height)
         self.__height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
 
     def area(self):
-        """returns the area of the rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """informal string representation of the rectangle"""
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+
+"""Square class"""
 
 
 class Square(Rectangle):
-    """A representation of a square"""
+    """Initializing size"""
+
     def __init__(self, size):
-        """instantiation of the square"""
-        self.integer_validator("size", size)
         self.__size = size
+        self.integer_validator("size", size)
         super().__init__(size, size)
-
-    def area(self):
-        """"returns the area of the square"""
-        return self.__size ** 2
-
-    def __str__(self):
-        """informal string reepresentation of the square"""
-        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
