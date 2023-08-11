@@ -3,7 +3,7 @@
 contains the class BaseGeometry and subclass Rectangle
 """
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
