@@ -14,7 +14,7 @@ class BaseMetaClass(type):
             if attribute != "__init_subclass__"
         ]
 
-class BaseGeometry:
+class BaseGeometry(metaclass=BaseMetaClass):
     """A class with public instance methods area and integer_validator"""
     
     def __dir__(cls):
