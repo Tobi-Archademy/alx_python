@@ -5,3 +5,4 @@ This file is the root directory for the python modules project folder. It contai
 * Base class
 * First Rectangle
 * Validate attributes
+* Area first
