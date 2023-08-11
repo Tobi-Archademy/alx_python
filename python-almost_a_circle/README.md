@@ -10,3 +10,4 @@ This file is the root directory for the python modules project folder. It contai
 * __str__
 * Display #1
 * Update #0
+* Update #1
