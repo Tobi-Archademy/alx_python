@@ -1,7 +1,6 @@
-#!/usr/bin/python3
-"""
-Contains the class BaseGeometry
-"""
+""" An empty class representing the base geometry."""
+
+
 class BaseMetaClass(type):
     """
     overrides.
@@ -14,9 +13,12 @@ class BaseMetaClass(type):
             if attribute != "__init_subclass__"
         ]
 
-class BaseGeometry:
-    """An empty class"""
-    
+
+class BaseGeometry(metaclass=BaseMetaClass):
+    """
+    Do nothing: By passing pass.
+    """
+
     def __dir__(cls):
         return [
             attribute
