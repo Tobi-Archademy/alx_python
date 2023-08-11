@@ -1,4 +1,3 @@
-#!/usr/bin/pytho3
 """
 Contains the class BaseGeometry and subclass Rectangle
 """
