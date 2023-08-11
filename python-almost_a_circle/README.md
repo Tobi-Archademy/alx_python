@@ -8,3 +8,4 @@ This file is the root directory for the python modules project folder. It contai
 * Area first
 * Display #0
 * __str__
+* Display #1
