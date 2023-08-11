@@ -10,3 +10,4 @@ This file is the root directory for the python modules project folder. It contai
 * Integer validator
 * Rectangle
 * Full rectangle
+* Square #1
